@@ -30,6 +30,29 @@ init(Req0=#{method := <<"POST">>}, State) ->
                         gc_gateway_app:save_alarm_config(Config),
                         % save_alarm_config(Config),
 
+
+
+ %% 构造广播消息
+% JsonMsg = io_lib:format(
+% "{\"hum_high\":~p,\"hum_low\":~p}\r\n",
+% [maps:get(hum_high, Config),
+%  maps:get(hum_low, Config)]
+% ),
+% BinMsg = list_to_binary(JsonMsg),
+
+ThresholdMsg = io_lib:format("hum_high=~p&hum_low=~p\r\n", [maps:get(hum_high, Config), maps:get(hum_low, Config)]),
+% 将列表转换为二进制数据
+BinMsg = list_to_binary(ThresholdMsg),
+
+%% 遍历 socket_map 广播消息
+[ gen_tcp:send(maps:get(socket, Map), BinMsg)
+|| {_Id, Map} <- ets:tab2list(socket_map),
+ maps:is_key(socket, Map)
+],
+
+
+
+
                         % 构造成功响应
                         Json = json:encode(#{code => 0, msg => <<"threshold updated">>}),
                         Req2 = cowboy_req:set_resp_header(<<"access-control-allow-origin">>, <<"*">>, Req1),

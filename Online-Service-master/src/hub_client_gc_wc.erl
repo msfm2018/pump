@@ -88,6 +88,28 @@ loop(Socket, {timeout, heartbeat}) ->
                 gen_tcp:send(Socket, <<"oklogin\r\n">>),
                 gen_server:cast(self(), reset_timeout),
                 io:format("Device login successful: ID=~p ~p ~n", [Id,Socket]),
+
+                case ets:lookup(sensor_alarm_config, thresholds) of
+                    [{thresholds, Conf}] ->
+                        HumHigh = maps:get(hum_high, Conf, 3000),
+                        HumLow  = maps:get(hum_low, Conf, 2000),
+                        % ThresholdMsg = io_lib:format("{\"hum_high\":~p,\"hum_low\":~p}\r\n", [HumHigh, HumLow]),
+                        % gen_tcp:send(Socket, list_to_binary(ThresholdMsg)),
+                        ThresholdMsg = io_lib:format("hum_high=~p&hum_low=~p\r\n", [HumHigh, HumLow]),
+                        case gen_tcp:send(Socket,  list_to_binary(ThresholdMsg)) of
+                            ok -> 
+                                io:format("命令已发送: ~p~n", [ThresholdMsg]);
+                            A ->
+                                io:format("发送失败: ~p~n", [A])
+                        end,
+                        
+
+                        io:format("下发阈值给设备 ~p -> hum_high=~p, hum_low=~p~n", [Id, HumHigh, HumLow]);
+                    [] ->
+                        io:format("未配置阈值，设备 ~p 使用默认参数~n", [Id])
+                end,
+                
+
                 ok;
 
             %  温湿度   
@@ -109,7 +131,11 @@ loop(Socket, {timeout, heartbeat}) ->
 case ets:lookup(sensor_alarm_config, thresholds) of
     [{thresholds, Conf}] ->
         %% 温湿度值为二进制字符串，需转为 float
-    FloatH = binary_to_float(H),  %% 把二进制湿度转 float
+     FloatH = binary_to_float(H),  %% 把二进制湿度转 float
+
+
+
+
     HumHigh = maps:get(hum_high, Conf, 3000),
     HumLow  = maps:get(hum_low, Conf, 2000),
     io:format("阈值HumLow HumHigh FloatH : ~p -> ~p,~p, ~n", [HumLow, HumHigh, FloatH]),
@@ -131,7 +157,7 @@ case ets:lookup(sensor_alarm_config, thresholds) of
                     on  -> <<"pump_on\r\n">>;
                     off -> <<"pump_off\r\n">>
                 end, io:format("要变更 ~p ~n",[Command]),
-                gen_tcp:send(Socket, Command),
+                % gen_tcp:send(Socket, Command),
                 NewMap = maps:put(pump_status, CurrStatus, Map),
                 ets:insert(socket_map, {Id, NewMap}),
                 io:format("水泵状态变更: ~p -> ~p, ID=~p, 湿度=~p~n", [PrevStatus, CurrStatus, Id, FloatH]);
