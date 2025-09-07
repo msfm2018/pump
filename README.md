@@ -4,8 +4,8 @@
 <p align="center">
   <img src="https://github.com/msfm2018/pump/blob/main/1.jpg?raw=true">
    <img src="https://github.com/msfm2018/pump/blob/main/2.jpg?raw=true">
-    <img src="https://github.com/msfm2018/pump/blob/main/3.jpg?raw=true">
-   <img src="https://github.com/msfm2018/pump/blob/main/4.jpg?raw=true">
+    <img src="https://github.com/msfm2018/pump/blob/v1.0/3.jpg?raw=true">
+   <img src="https://github.com/msfm2018/pump/blob/v1.0/4.jpg?raw=true">
    <img src="https://github.com/msfm2018/pump/blob/main/3?raw=true">
    <img src="https://github.com/msfm2018/pump/blob/main/4?raw=true">
    <img src="https://github.com/msfm2018/pump/blob/main/5?raw=true">
