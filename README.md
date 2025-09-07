@@ -4,7 +4,9 @@
 <p align="center">
   <img src="https://github.com/msfm2018/pump/blob/main/1.jpg?raw=true">
    <img src="https://github.com/msfm2018/pump/blob/main/2.jpg?raw=true">
+    <h4>接外置电源</h4>
     <img src="https://github.com/msfm2018/pump/blob/v1.0/3.jpg?raw=true">
+  <h4>接继电器</h4>
    <img src="https://github.com/msfm2018/pump/blob/v1.0/4.jpg?raw=true">
    <img src="https://github.com/msfm2018/pump/blob/main/3?raw=true">
    <img src="https://github.com/msfm2018/pump/blob/main/4?raw=true">
