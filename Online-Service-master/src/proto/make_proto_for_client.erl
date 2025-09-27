@@ -13,7 +13,7 @@
 -include_lib("xmerl/include/xmerl.hrl").
 
 %% API
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 start() ->
     case file:read_file("pp.xml") of

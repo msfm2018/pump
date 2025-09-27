@@ -14885,3 +14885,1828 @@ Ranch listener http, connection process <0.262.0>, stream 59 had its request pro
 =ERROR REPORT==== 3-Sep-2025::21:22:40.991000 ===
 Ranch listener http, connection process <0.262.0>, stream 60 had its request process <0.334.0> exit with reason {{badmatch,#{pid => <0.262.0>,port => 8999,scheme => <<"http">>,version => 'HTTP/1.1',path => <<"/alarm/threshold">>,host => <<"127.0.0.1">>,peer => {{127,0,0,1},52023},bindings => #{},cert => undefined,host_info => undefined,path_info => undefined,streamid => 60,method => <<"POST">>,headers => #{<<"accept">> => <<"*/*">>,<<"accept-encoding">> => <<"gzip, deflate, br, zstd">>,<<"accept-language">> => <<"zh-CN,zh;q=0.9">>,<<"connection">> => <<"keep-alive">>,<<"content-length">> => <<"59">>,<<"content-type">> => <<"application/json">>,<<"host">> => <<"127.0.0.1:8999">>,<<"origin">> => <<"http://127.0.0.1">>,<<"referer">> => <<"http://127.0.0.1/">>,<<"sec-ch-ua">> => <<"\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"">>,<<"sec-ch-ua-mobile">> => <<"?0">>,<<"sec-ch-ua-platform">> => <<"\"Windows\"">>,<<"sec-fetch-dest">> => <<"empty">>,<<"sec-fetch-mode">> => <<"cors">>,<<"sec-fetch-site">> => <<"same-site">>,<<"user-agent">> => <<"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36">>},body_length => 59,has_body => true,qs => <<>>,ref => http,sock => {{127,0,0,1},8999},has_read_body => true,has_sent_resp => true}},[{alarm_config_handler,init,2,[{file,"alarm_config_handler.erl"},{line,59}]},{cowboy_handler,execute,2,[{file,[99,58,47,85,115,101,114,115,47,65,100,109,105,110,105,115,116,114,97,116,111,114,47,68,111,119,110,108,111,97,100,115,47,112,122,65,112,112,45,51,46,49,32,40,49,41,47,112,122,65,112,112,45,51,46,49,47,26381,21153,31471,25991,20214,47,109,121,95,112,122,95,115,101,114,118,101,114,47,95,98,117,105,108,100,47,100,101,102,97,117,108,116,47,108,105,98,47,99,111,119,98,111,121,47,115,114,99,47,99,111,119,98,111,121,95,104,97,110,100,108,101,114,46,101,114,108]},{line,37}]},{cowboy_stream_h,execute,3,[{file,[99,58,47,85,115,101,114,115,47,65,100,109,105,110,105,115,116,114,97,116,111,114,47,68,111,119,110,108,111,97,100,115,47,112,122,65,112,112,45,51,46,49,32,40,49,41,47,112,122,65,112,112,45,51,46,49,47,26381,21153,31471,25991,20214,47,109,121,95,112,122,95,115,101,114,118,101,114,47,95,98,117,105,108,100,47,100,101,102,97,117,108,116,47,108,105,98,47,99,111,119,98,111,121,47,115,114,99,47,99,111,119,98,111,121,95,115,116,114,101,97,109,95,104,46,101,114,108]},{line,310}]},{cowboy_stream_h,request_process,3,[{file,[99,58,47,85,115,101,114,115,47,65,100,109,105,110,105,115,116,114,97,116,111,114,47,68,111,119,110,108,111,97,100,115,47,112,122,65,112,112,45,51,46,49,32,40,49,41,47,112,122,65,112,112,45,51,46,49,47,26381,21153,31471,25991,20214,47,109,121,95,112,122,95,115,101,114,118,101,114,47,95,98,117,105,108,100,47,100,101,102,97,117,108,116,47,108,105,98,47,99,111,119,98,111,121,47,115,114,99,47,99,111,119,98,111,121,95,115,116,114,101,97,109,95,104,46,101,114,108]},{line,299}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,333}]}]}
 
+=ERROR REPORT==== 26-Sep-2025::16:28:26.285000 ===
+** Generic server <0.231.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.6>,false,2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:28:26.285000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.231.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.201.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 31935
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::16:47:17.451000 ===
+** Generic server <0.229.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.6>,false,2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:47:17.452000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.229.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.199.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 9233
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::16:48:51.795000 ===
+** Generic server <0.230.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.7>,false,2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:48:51.795000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.230.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.200.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 29
+    reductions: 19278
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::16:49:22.883000 ===
+** Generic server <0.231.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.8>,false,2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:49:22.883000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.231.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.201.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 11712
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::16:49:45.646000 ===
+** Generic server <0.233.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.9>,false,2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:49:45.646000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.233.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.202.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 10101
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::16:51:07.261000 ===
+** Generic server <0.234.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.10>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:51:07.261000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.234.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.203.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 15238
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::16:52:17.517000 ===
+** Generic server <0.243.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.11>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:52:17.517000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.243.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.204.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 14007
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::16:52:34.507000 ===
+** Generic server <0.244.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.12>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:52:34.508000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.244.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.205.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 9813
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::16:53:24.757000 ===
+** Generic server <0.245.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.13>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:53:24.757000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.245.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.206.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 12503
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::16:56:32.090000 ===
+** Generic server <0.254.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.14>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:56:32.090000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.254.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.207.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 29382
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::16:58:29.064000 ===
+** Generic server <0.265.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.16>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:58:29.064000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.265.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.209.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 29
+    reductions: 11733
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::16:59:18.246000 ===
+** Generic server <0.266.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.17>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:59:18.246000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.266.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.210.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 13857
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::16:59:39.588000 ===
+** Generic server <0.275.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.18>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::16:59:39.588000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.275.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.211.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 11551
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::17:00:19.905000 ===
+** Generic server <0.276.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.19>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::17:00:19.905000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.276.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.212.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 11295
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::17:00:32.773000 ===
+** Generic server <0.302.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.28>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.28>}
+
+=CRASH REPORT==== 26-Sep-2025::17:00:32.773000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.302.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.28>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.221.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4334
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::17:00:44.850000 ===
+** Generic server <0.277.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.20>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::17:00:44.851000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.277.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.213.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 8964
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::17:00:59.376000 ===
+** Generic server <0.278.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.21>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::17:00:59.377000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.278.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.214.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 8964
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::17:02:02.899000 ===
+** Generic server <0.281.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.23>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::17:02:02.899000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.281.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.216.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 11539
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::17:02:43.782000 ===
+** Generic server <0.289.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.24>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::17:02:43.782000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.289.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.217.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 10245
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::17:04:08.353000 ===
+** Generic server <0.292.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.26>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::17:04:08.354000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.292.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.219.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 12311
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::17:05:11.230000 ===
+** Generic server <0.293.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.27>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::17:05:11.230000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.293.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.220.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 10532
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::17:07:12.756000 ===
+** Generic server <0.304.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.30>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::17:07:12.756000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.304.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.223.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 12756
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::23:41:09.469000 ===
+** Generic server <0.552.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.6>,false,2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::23:41:09.469000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.552.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.201.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 14373
+  neighbours:
+
+=ERROR REPORT==== 26-Sep-2025::23:42:03.237000 ===
+** Generic server <0.560.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.7>,false,2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 26-Sep-2025::23:42:03.237000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.560.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.202.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 13520
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::10:11:45.160000 ===
+** Generic server <0.278.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.10>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.10>}
+
+=CRASH REPORT==== 27-Sep-2025::10:11:45.160000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.278.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.10>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.205.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4525
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::10:16:14.972000 ===
+** Generic server <0.301.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.17>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.17>}
+
+=CRASH REPORT==== 27-Sep-2025::10:16:14.972000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.301.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.17>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.212.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4365
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::10:22:07.727000 ===
+** Generic server <0.328.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.27>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.27>}
+
+=CRASH REPORT==== 27-Sep-2025::10:22:07.727000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.328.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.27>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.222.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4344
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::10:25:24.763000 ===
+** Generic server <0.340.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.30>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.30>}
+
+=CRASH REPORT==== 27-Sep-2025::10:25:24.763000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.340.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.30>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.225.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4365
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::11:30:05.942000 ===
+** Generic server <0.314.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.13>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.13>}
+
+=CRASH REPORT==== 27-Sep-2025::11:30:05.942000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.314.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.13>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.208.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4532
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::12:10:52.344000 ===
+** Generic server <0.459.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.46>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.46>}
+
+=CRASH REPORT==== 27-Sep-2025::12:10:52.344000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.459.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.46>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.211.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4259
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::12:40:31.235000 ===
+** Generic server <0.569.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.71>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.71>}
+
+=CRASH REPORT==== 27-Sep-2025::12:40:31.236000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.569.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.71>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.206.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4365
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::12:45:32.503000 ===
+** Generic server <0.591.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.77>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.77>}
+
+=CRASH REPORT==== 27-Sep-2025::12:45:32.503000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.591.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.77>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.212.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4365
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::12:57:17.570000 ===
+** Generic server <0.634.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.86>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.86>}
+
+=CRASH REPORT==== 27-Sep-2025::12:57:17.571000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.634.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.86>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.221.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4365
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::13:51:48.363000 ===
+** Generic server <0.258.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.6>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.6>}
+
+=CRASH REPORT==== 27-Sep-2025::13:51:48.363000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.258.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.6>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.199.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4532
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:30:49.437000 ===
+** Generic server <0.248.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.8>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.8>}
+
+=CRASH REPORT==== 27-Sep-2025::19:30:49.437000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.248.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.8>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.201.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4526
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:32:08.234000 ===
+** Generic server <0.250.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.9>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.9>}
+
+=CRASH REPORT==== 27-Sep-2025::19:32:08.234000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.250.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.9>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.202.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4336
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:33:30.893000 ===
+** Generic server <0.258.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.10>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.10>}
+
+=CRASH REPORT==== 27-Sep-2025::19:33:30.893000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.258.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.10>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.203.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4330
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:34:48.285000 ===
+** Generic server <0.260.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.11>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.11>}
+
+=CRASH REPORT==== 27-Sep-2025::19:34:48.285000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.260.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.11>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.204.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4330
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:36:31.178000 ===
+** Generic server <0.263.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.12>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.12>}
+
+=CRASH REPORT==== 27-Sep-2025::19:36:31.178000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.263.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.12>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.205.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4330
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:37:49.956000 ===
+** Generic server <0.265.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.13>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.13>}
+
+=CRASH REPORT==== 27-Sep-2025::19:37:49.956000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.265.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.13>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.206.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4330
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:39:11.394000 ===
+** Generic server <0.267.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.14>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.14>}
+
+=CRASH REPORT==== 27-Sep-2025::19:39:11.394000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.267.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.14>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.207.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4330
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:40:30.026000 ===
+** Generic server <0.269.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.15>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.15>}
+
+=CRASH REPORT==== 27-Sep-2025::19:40:30.026000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.269.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.15>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.208.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4334
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:43:08.494000 ===
+** Generic server <0.229.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.6>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.6>}
+
+=CRASH REPORT==== 27-Sep-2025::19:43:08.494000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.229.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.6>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.197.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4539
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:44:28.359000 ===
+** Generic server <0.230.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.7>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.7>}
+
+=CRASH REPORT==== 27-Sep-2025::19:44:28.359000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.230.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.7>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.198.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4328
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:45:50.296000 ===
+** Generic server <0.233.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.8>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.8>}
+
+=CRASH REPORT==== 27-Sep-2025::19:45:50.296000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.233.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.8>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.199.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4328
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:47:15.615000 ===
+** Generic server <0.235.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.9>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.9>}
+
+=CRASH REPORT==== 27-Sep-2025::19:47:15.615000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.235.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.9>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.200.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4328
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:48:28.409000 ===
+** Generic server <0.236.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.10>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.10>}
+
+=CRASH REPORT==== 27-Sep-2025::19:48:28.411000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.236.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.10>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.201.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4330
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:49:49.599000 ===
+** Generic server <0.239.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.11>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.11>}
+
+=CRASH REPORT==== 27-Sep-2025::19:49:49.599000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.239.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.11>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.202.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4330
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:51:09.593000 ===
+** Generic server <0.241.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.12>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.12>}
+
+=CRASH REPORT==== 27-Sep-2025::19:51:09.593000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.241.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.12>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.203.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4338
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:52:31.186000 ===
+** Generic server <0.243.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.13>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.13>}
+
+=CRASH REPORT==== 27-Sep-2025::19:52:31.186000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.243.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.13>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.204.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4330
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:53:48.374000 ===
+** Generic server <0.245.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.14>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.14>}
+
+=CRASH REPORT==== 27-Sep-2025::19:53:48.374000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.245.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.14>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.205.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4330
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:55:08.345000 ===
+** Generic server <0.248.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.15>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.15>}
+
+=CRASH REPORT==== 27-Sep-2025::19:55:08.346000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.248.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.15>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.206.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4338
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::19:57:26.035000 ===
+** Generic server <0.252.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.18>,true,0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.18>}
+
+=CRASH REPORT==== 27-Sep-2025::19:57:26.035000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.252.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.18>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.209.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4334
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::20:38:35.484000 ===
+** Generic server <0.386.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.118>,true,
+                               0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.118>}
+
+=CRASH REPORT==== 27-Sep-2025::20:38:35.484000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.386.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.118>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.219.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4486
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::20:55:34.479000 ===
+** Generic server <0.447.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.158>,true,
+                               0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.158>}
+
+=CRASH REPORT==== 27-Sep-2025::20:55:34.479000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.447.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.158>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.199.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4486
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::21:11:01.388000 ===
+** Generic server <0.504.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.172>,true,
+                               0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.172>}
+
+=CRASH REPORT==== 27-Sep-2025::21:11:01.388000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.504.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.172>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.213.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4383
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::21:21:25.007000 ===
+** Generic server <0.542.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.190>,true,
+                               0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.190>}
+
+=CRASH REPORT==== 27-Sep-2025::21:21:25.008000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.542.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.190>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.201.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4489
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::21:44:49.157000 ===
+** Generic server <0.625.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.253>,true,
+                               0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.253>}
+
+=CRASH REPORT==== 27-Sep-2025::21:44:49.157000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.625.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.253>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.204.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4486
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::21:48:19.174000 ===
+** Generic server <0.637.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.263>,true,
+                               0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.263>}
+
+=CRASH REPORT==== 27-Sep-2025::21:48:19.174000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.637.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.263>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.214.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4486
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::22:02:36.195000 ===
+** Generic server <0.677.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.291>,true,
+                               0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.291>}
+
+=CRASH REPORT==== 27-Sep-2025::22:02:36.195000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.677.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.291>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.212.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4383
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::22:07:30.532000 ===
+** Generic server <0.694.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.303>,true,
+                               0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.303>}
+
+=CRASH REPORT==== 27-Sep-2025::22:07:30.533000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.694.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.303>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.224.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4459
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::22:16:02.608000 ===
+** Generic server <0.721.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.323>,true,
+                               0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.323>}
+
+=CRASH REPORT==== 27-Sep-2025::22:16:02.609000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.721.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.323>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.214.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4459
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::22:35:39.562000 ===
+** Generic server <0.787.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.373>,true,
+                               0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.373>}
+
+=CRASH REPORT==== 27-Sep-2025::22:35:39.562000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.787.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.373>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.204.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4451
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::22:40:12.532000 ===
+** Generic server <0.803.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.385>,true,
+                               0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.385>}
+
+=CRASH REPORT==== 27-Sep-2025::22:40:12.532000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.803.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.385>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.216.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4451
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::22:42:56.601000 ===
+** Generic server <0.815.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.394>,true,
+                               0}
+** Reason for termination ==
+** {tcp_closed,#Port<0.394>}
+
+=CRASH REPORT==== 27-Sep-2025::22:42:56.601000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.815.0>
+    registered_name: []
+    exception exit: {tcp_closed,#Port<0.394>}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.225.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4451
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::23:49:30.120000 ===
+** Generic server <0.863.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.399>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 27-Sep-2025::23:49:30.120000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.863.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.200.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 29
+    reductions: 12102
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::23:50:18.328000 ===
+** Generic server <0.872.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.400>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 27-Sep-2025::23:50:18.328000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.872.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.201.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 8661
+  neighbours:
+
+=ERROR REPORT==== 27-Sep-2025::23:57:31.978000 ===
+** Generic server <0.874.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.401>,false,
+                               2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 27-Sep-2025::23:57:31.978000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.874.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.202.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 11167
+  neighbours:
+
+=ERROR REPORT==== 28-Sep-2025::00:53:30.528000 ===
+** Generic server <0.229.0> terminating 
+** Last message in was timeout
+** When Server state == {state,fun hub_client_gc_wc:loop/2,#Port<0.6>,false,2}
+** Reason for termination ==
+** {timeout,heartbeat}
+
+=CRASH REPORT==== 28-Sep-2025::00:53:30.529000 ===
+  crasher:
+    initial call: client_handle:init/1
+    pid: <0.229.0>
+    registered_name: []
+    exception exit: {timeout,heartbeat}
+      in function  gen_server:handle_common_reply/5 (gen_server.erl:2562)
+    ancestors: [<0.197.0>,t_accept_sup,t_tcp_sup,gc_gateway_app,<0.100.0>]
+    message_queue_len: 0
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 8730
+  neighbours:
+

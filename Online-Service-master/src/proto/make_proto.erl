@@ -1,19 +1,19 @@
 %% -*- coding: latin-1 -*-
 %%%-------------------------------------------------------------------
-%%% @author wulei
-%%% @copyright (C) 2014, <COMPANY>
+%%% @author  
+%%% @copyright (C)  2025, <COMPANY>
 %%% @doc
 %%%
 %%% @end
-%%% Created : 15. 十二月 2014 下午7:34
+%%% Created : 15. 十二月  2025 下午7:34
 %%%-------------------------------------------------------------------
 -module(make_proto).
--author("wulei").
+-author(" ").
 
 -include_lib("xmerl/include/xmerl.hrl").
 
 %% API
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 start() ->
     case file:read_file("error.xml") of

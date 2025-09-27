@@ -1,17 +1,15 @@
 %%%-------------------------------------------------------------------
-%%% @author wulei
-%%% @copyright (C) 2014, <COMPANY>
+%%% @author  
+%%% @copyright (C)  2025, <COMPANY>
 %%% @doc
 %%%
 %%% @end
-%%% Created : 16. 十二月 2014 下午5:41
+%%% Created : 16. 十二月  2025 下午5:41
 %%%-------------------------------------------------------------------
 -module(pt).
--author("wulei").
 
 %% API
--compile(export_all).
-
+-export([ packstring/1,read_string/1]).
 %% 打包字符串的函数
 packstring(L) when is_list(L) ->
     BL = list_to_binary(L),

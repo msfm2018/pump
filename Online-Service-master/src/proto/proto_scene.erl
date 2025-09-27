@@ -6,7 +6,7 @@
 %%% 请勿手动修改
 %%%---------------------------------------------
 -module(proto_scene).
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 %%% ------------------
 %%% 协议解析

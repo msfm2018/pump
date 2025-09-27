@@ -6,7 +6,7 @@
 %%% 请勿手动修改
 %%%---------------------------------------------
 -module(proto).
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 -include( "proto_player.hrl").
 -include( "proto_event.hrl").

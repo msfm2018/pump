@@ -1,10 +1,10 @@
 %%%-------------------------------------------------------------------
 %%% @author ASUS
-%%% @copyright (C) 2014, <COMPANY>
+%%% @copyright (C)  2025, <COMPANY>
 %%% @doc
 %%%
 %%% @end
-%%% Created : 14. 十二月 2014 下午4:50
+%%% Created : 14. 十二月  2025 下午4:50
 %%%-------------------------------------------------------------------
 -author("ASUS").
 
@@ -46,7 +46,7 @@
 -define(SYNC_SEND(Socket, Data), catch erlang:port_command(Socket, Data, [force])).
 %% 网关最大连接数
 -define(MAX_GATEWAY_CONNECTIONS, 10000).
--define(CONNECTION_FIRST_DATA_TIME, 5000).  % 连接建立成功之后 在这个时间之内没有发数据则断开
+-define(CONNECTION_FIRST_DATA_TIME, 60000).  % 连接建立成功之后 在这个时间之内没有发数据则断开
 -define(HEART_BREAK_TIME, 120000).   % 心跳时长
 -define(HEART_BREAK_CLIENT_TIME, 50000).   % 客户端心跳包间隔
 -define(HEART_BREAK_TIME_HTTP, 5000).   % http连接超时时长

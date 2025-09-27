@@ -60,10 +60,12 @@ set_sockopt(LSock, Sock) ->
         ok -> ok;
         Error ->
           gen_tcp:close(Sock),
+          io:format("错误终止a~n"),
           Error
       end;
     Error ->
       gen_tcp:close(Sock),
+      io:format("错误终止b~n"),
       Error
   end.
 
